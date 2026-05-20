@@ -18,20 +18,20 @@
             "media_presentation": "grid",
             "media_columns": "two",
             "image_gap": 4,
-            "large_first_image": false,
+            "large_first_image": true,
             "icons_style": "none",
             "slideshow_controls_style": "counter",
             "slideshow_mobile_controls_style": "dots",
-            "thumbnail_position": "right",
-            "thumbnail_width": 44,
+            "thumbnail_position": "left",
+            "thumbnail_width": 64,
             "aspect_ratio": "adapt",
             "constrain_to_viewport": true,
-            "media_fit": "contain",
+            "media_fit": "cover",
             "media_radius": 0,
             "extend_media": false,
             "zoom": true,
-            "video_loop": false,
-            "hide_variants": true,
+            "video_loop": true,
+            "hide_variants": false,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -49,7 +49,7 @@
             "custom_width_mobile": 100,
             "height": "fit",
             "details_position": "flex-start",
-            "gap": 28,
+            "gap": 24,
             "sticky_details_desktop": true,
             "inherit_color_scheme": true,
             "color_scheme": "scheme-1",
@@ -66,7 +66,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "group_icgrde": {
+            "group_header": {
               "type": "group",
               "name": "Header",
               "settings": {
@@ -78,7 +78,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 8,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -104,22 +104,22 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_xrnftG": {
+                "text_badge": {
                   "type": "text",
-                  "name": "Product title",
+                  "name": "Pro badge",
                   "settings": {
-                    "text": "<h1>{{ closest.product.title }}</h1>",
-                    "width": "100%",
+                    "text": "<p>Professional Grade</p>",
+                    "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h3",
-                    "font": "var(--font-primary--family)",
-                    "font_size": "",
+                    "type_preset": "h6",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.7rem",
                     "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "",
+                    "letter_spacing": "0.12em",
+                    "case": "uppercase",
+                    "wrap": "nowrap",
+                    "color": "#C9A96E",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -130,17 +130,43 @@
                   },
                   "blocks": {}
                 },
-                "price_tVjtKg": {
+                "text_title": {
+                  "type": "text",
+                  "name": "Product title",
+                  "settings": {
+                    "text": "<h1>{{ closest.product.title }}</h1>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "-0.01em",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "#0D0D0D",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "price_main": {
                   "type": "price",
                   "settings": {
                     "show_sale_price_first": true,
-                    "show_installments": false,
+                    "show_installments": true,
                     "show_tax_info": false,
                     "type_preset": "paragraph",
                     "width": "100%",
                     "alignment": "left",
                     "font": "var(--font-body--family)",
-                    "font_size": "1rem",
+                    "font_size": "1.15rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
@@ -154,23 +180,24 @@
                 }
               },
               "block_order": [
-                "text_xrnftG",
-                "price_tVjtKg"
+                "text_badge",
+                "text_title",
+                "price_main"
               ]
             },
-            "divider_VJhene": {
+            "divider_top": {
               "type": "_divider",
               "name": "t:names.divider",
               "settings": {
                 "thickness": 1,
                 "corner_radius": "square",
                 "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
+                "padding-block-start": 4,
+                "padding-block-end": 4
               },
               "blocks": {}
             },
-            "variant_picker_R3rGDr": {
+            "variant_picker": {
               "type": "variant-picker",
               "settings": {
                 "variant_style": "buttons",
@@ -183,7 +210,7 @@
               },
               "blocks": {}
             },
-            "buy_buttons_eYQEYi": {
+            "buy_buttons": {
               "type": "buy-buttons",
               "settings": {
                 "stacking": true,
@@ -217,7 +244,45 @@
               },
               "block_order": []
             },
-            "text_aEtTtq": {
+            "text_micro_trust": {
+              "type": "text",
+              "name": "Micro trust",
+              "settings": {
+                "text": "<p>✓ Free returns within 30 days &nbsp;·&nbsp; ✓ Ships in 1–3 business days</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.8rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "#8C8C8C",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "divider_mid": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "padding-block-start": 4,
+                "padding-block-end": 4
+              },
+              "blocks": {}
+            },
+            "text_description": {
               "type": "text",
               "name": "Product description",
               "settings": {
@@ -226,7 +291,7 @@
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "rte",
-                "font": "var(--font-primary--family)",
+                "font": "var(--font-body--family)",
                 "font_size": "",
                 "line_height": "normal",
                 "letter_spacing": "normal",
@@ -245,11 +310,13 @@
             }
           },
           "block_order": [
-            "group_icgrde",
-            "divider_VJhene",
-            "variant_picker_R3rGDr",
-            "buy_buttons_eYQEYi",
-            "text_aEtTtq"
+            "group_header",
+            "divider_top",
+            "variant_picker",
+            "buy_buttons",
+            "text_micro_trust",
+            "divider_mid",
+            "text_description"
           ]
         }
       },
@@ -257,26 +324,83 @@
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
         "equal_columns": false,
-        "limit_details_width": false,
-        "gap": 48,
-        "color_scheme": "",
+        "limit_details_width": true,
+        "gap": 56,
+        "color_scheme": "scheme-1",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
     },
-    "product_recommendations_qggXJq": {
+    "trust_bar": {
+      "type": "sw-trust-bar",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "item_1_text": "30-Day Money Back Guarantee",
+        "item_2_text": "1,200W Professional Grade",
+        "item_3_text": "Free US Shipping Over $50"
+      }
+    },
+    "benefits": {
+      "type": "sw-benefits",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Designed for the Way You Live",
+        "benefit_1_title": "Ionic Technology",
+        "benefit_1_desc": "Reduces frizz up to 75% by sealing the hair cuticle and locking in moisture for a smooth, glossy finish.",
+        "benefit_2_title": "3 Heat Settings",
+        "benefit_2_desc": "From a quick blow-out to a gentle style — choose low, medium, or high and take complete control of your result.",
+        "benefit_3_title": "360° Airflow Barrel",
+        "benefit_3_desc": "Ceramic-tourmaline barrel wraps each strand evenly — building volume at the root and shine through the ends."
+      }
+    },
+    "reviews": {
+      "type": "sw-reviews",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "heading": "Real Women. Real Results.",
+        "aggregate_score": "4.8",
+        "review_count": "2,400+",
+        "review_1_text": "I have thick, wavy hair and this brush changed my morning routine completely. I used to spend 40 minutes — now I'm done in 15. The results are salon-level, no exaggeration.",
+        "review_1_name": "Camila R.",
+        "review_1_detail": "Thick, wavy hair · Miami, FL",
+        "review_2_text": "The frizz control is unreal. I live in a humid city and my hair stays smooth all day. I've tried three other hot air brushes — this is the only one that actually delivers.",
+        "review_2_name": "Priya M.",
+        "review_2_detail": "Fine, straight hair · Houston, TX",
+        "review_3_text": "Bought this after seeing it on TikTok and it totally lives up to the hype. Super lightweight, heats up fast, and the cable is long enough to actually move around. 10/10.",
+        "review_3_name": "Ashley T.",
+        "review_3_detail": "Curly hair · New York, NY"
+      }
+    },
+    "faq": {
+      "type": "sw-faq",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "heading": "Frequently Asked Questions",
+        "q_1": "Does it work on thick or curly hair?",
+        "a_1": "Yes. The 360° airflow barrel and ionic technology are effective on all hair types, including thick, coarse, and naturally curly hair. We recommend using the medium or high heat setting for denser textures.",
+        "q_2": "How long does it take to heat up?",
+        "a_2": "The SleekWave brush reaches full operating temperature in under 60 seconds, so you can go from off to styling in no time.",
+        "q_3": "Is it safe to use daily?",
+        "a_3": "Yes. The ceramic-tourmaline coating distributes heat evenly to prevent hot spots. For best results and long-term hair health, we recommend using a heat protectant spray before styling.",
+        "q_4": "What voltage does it use? Can I use it abroad?",
+        "a_4": "The SleekWave brush is dual voltage (110–240V), making it compatible with outlets worldwide. You may need a plug adapter depending on your destination.",
+        "q_5": "What is the return policy?",
+        "a_5": "We offer a 30-day hassle-free return policy. If you are not completely satisfied, contact our team and we will take care of you — no questions asked."
+      }
+    },
+    "product_recommendations": {
       "type": "product-recommendations",
       "blocks": {
-        "text_cbcgyb": {
+        "text_reco_header": {
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>You may also like </h3>",
+            "text": "<h3>You May Also Like</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
             "type_preset": "h4",
-            "font": "var(--font-primary--family)",
+            "font": "var(--font-heading--family)",
             "font_size": "",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -311,7 +435,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_card_gallery_DNizbJ": {
+            "product_card_gallery": {
               "type": "_product-card-gallery",
               "name": "t:names.product_card_media",
               "settings": {
@@ -327,7 +451,7 @@
               },
               "blocks": {}
             },
-            "product_title_M7MJkb": {
+            "product_title": {
               "type": "product-title",
               "name": "t:names.product_title",
               "settings": {
@@ -352,7 +476,7 @@
               },
               "blocks": {}
             },
-            "price_gLWgA6": {
+            "price_reco": {
               "type": "price",
               "settings": {
                 "show_sale_price_first": true,
@@ -376,21 +500,21 @@
             }
           },
           "block_order": [
-            "product_card_gallery_DNizbJ",
-            "product_title_M7MJkb",
-            "price_gLWgA6"
+            "product_card_gallery",
+            "product_title",
+            "price_reco"
           ]
         }
       },
       "block_order": [
-        "text_cbcgyb"
+        "text_reco_header"
       ],
       "name": "t:names.product_recommendations",
       "settings": {
         "product": "{{ closest.product }}",
         "recommendation_type": "related",
         "layout_type": "grid",
-        "carousel_on_mobile": false,
+        "carousel_on_mobile": true,
         "max_products": 4,
         "columns": 4,
         "mobile_columns": "2",
@@ -401,13 +525,17 @@
         "section_width": "page-width",
         "gap": 28,
         "color_scheme": "scheme-1",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     }
   },
   "order": [
     "main",
-    "product_recommendations_qggXJq"
+    "trust_bar",
+    "benefits",
+    "reviews",
+    "faq",
+    "product_recommendations"
   ]
 }

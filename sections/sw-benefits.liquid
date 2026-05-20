@@ -1,0 +1,196 @@
+<div class="sw-benefits color-{{ section.settings.color_scheme }}">
+  <div class="sw-benefits__inner page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="sw-benefits__heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="sw-benefits__grid">
+
+      <div class="sw-benefits__card">
+        <div class="sw-benefits__icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+          </svg>
+        </div>
+        <h3 class="sw-benefits__card-title">{{ section.settings.benefit_1_title }}</h3>
+        <p class="sw-benefits__card-desc">{{ section.settings.benefit_1_desc }}</p>
+      </div>
+
+      <div class="sw-benefits__card">
+        <div class="sw-benefits__icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
+          </svg>
+        </div>
+        <h3 class="sw-benefits__card-title">{{ section.settings.benefit_2_title }}</h3>
+        <p class="sw-benefits__card-desc">{{ section.settings.benefit_2_desc }}</p>
+      </div>
+
+      <div class="sw-benefits__card">
+        <div class="sw-benefits__icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423L16.5 15.75l.394 1.183a2.25 2.25 0 001.423 1.423L19.5 18.75l-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+          </svg>
+        </div>
+        <h3 class="sw-benefits__card-title">{{ section.settings.benefit_3_title }}</h3>
+        <p class="sw-benefits__card-desc">{{ section.settings.benefit_3_desc }}</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .sw-benefits {
+    padding-block: 72px;
+  }
+
+  .sw-benefits__heading {
+    text-align: center;
+    font-family: var(--font-heading--family);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 48px;
+    color: #0D0D0D;
+  }
+
+  .sw-benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .sw-benefits__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 40px 24px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+  }
+
+  .sw-benefits__card:hover {
+    border-color: #C9A96E;
+  }
+
+  .sw-benefits__icon-wrap {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #FAF8F5;
+    color: #C9A96E;
+  }
+
+  .sw-benefits__card-title {
+    font-family: var(--font-heading--family);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #0D0D0D;
+    margin: 0;
+  }
+
+  .sw-benefits__card-desc {
+    font-family: var(--font-body--family);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #5a5a5a;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .sw-benefits {
+      padding-block: 48px;
+    }
+
+    .sw-benefits__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .sw-benefits__card {
+      padding: 28px 20px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Benefits",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Designed for the Way You Live"
+    },
+    {
+      "type": "header",
+      "content": "Benefit 1 — Ionic"
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_title",
+      "label": "Title",
+      "default": "Ionic Technology"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_1_desc",
+      "label": "Description",
+      "default": "Reduces frizz up to 75% by sealing the hair cuticle and locking in moisture for a smooth, glossy finish."
+    },
+    {
+      "type": "header",
+      "content": "Benefit 2 — Heat"
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_title",
+      "label": "Title",
+      "default": "3 Heat Settings"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_2_desc",
+      "label": "Description",
+      "default": "From a quick blow-out to a gentle style — choose low, medium, or high and take complete control of your result."
+    },
+    {
+      "type": "header",
+      "content": "Benefit 3 — Airflow"
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_title",
+      "label": "Title",
+      "default": "360° Airflow Barrel"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_3_desc",
+      "label": "Description",
+      "default": "Ceramic-tourmaline barrel wraps each strand evenly — building volume at the root and shine through the ends."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits"
+    }
+  ]
+}
+{% endschema %}

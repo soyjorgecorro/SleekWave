@@ -1,0 +1,263 @@
+<div class="sw-reviews color-{{ section.settings.color_scheme }}">
+  <div class="sw-reviews__inner page-width">
+
+    <div class="sw-reviews__header">
+      {% if section.settings.heading != blank %}
+        <h2 class="sw-reviews__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="sw-reviews__aggregate">
+        <span class="sw-reviews__stars" aria-label="4.8 out of 5 stars">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+        </span>
+        <span class="sw-reviews__score">{{ section.settings.aggregate_score }} / 5</span>
+        <span class="sw-reviews__count">({{ section.settings.review_count }} reviews)</span>
+      </div>
+    </div>
+
+    <div class="sw-reviews__grid">
+
+      <div class="sw-reviews__card">
+        <div class="sw-reviews__card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="sw-reviews__card-text">"{{ section.settings.review_1_text }}"</p>
+        <div class="sw-reviews__card-author">
+          <strong>{{ section.settings.review_1_name }}</strong>
+          <span>{{ section.settings.review_1_detail }}</span>
+        </div>
+      </div>
+
+      <div class="sw-reviews__card">
+        <div class="sw-reviews__card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="sw-reviews__card-text">"{{ section.settings.review_2_text }}"</p>
+        <div class="sw-reviews__card-author">
+          <strong>{{ section.settings.review_2_name }}</strong>
+          <span>{{ section.settings.review_2_detail }}</span>
+        </div>
+      </div>
+
+      <div class="sw-reviews__card">
+        <div class="sw-reviews__card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="sw-reviews__card-text">"{{ section.settings.review_3_text }}"</p>
+        <div class="sw-reviews__card-author">
+          <strong>{{ section.settings.review_3_name }}</strong>
+          <span>{{ section.settings.review_3_detail }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .sw-reviews {
+    padding-block: 72px;
+    background: #0D0D0D;
+    color: #ffffff;
+  }
+
+  .sw-reviews__header {
+    text-align: center;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sw-reviews__heading {
+    font-family: var(--font-heading--family);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .sw-reviews__aggregate {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sw-reviews__stars {
+    color: #C9A96E;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+
+  .sw-reviews__score {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .sw-reviews__count {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .sw-reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .sw-reviews__card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sw-reviews__card-stars {
+    color: #C9A96E;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .sw-reviews__card-text {
+    font-family: var(--font-body--family);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.85);
+    margin: 0;
+    flex: 1;
+    font-style: italic;
+  }
+
+  .sw-reviews__card-author {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .sw-reviews__card-author strong {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .sw-reviews__card-author span {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+  }
+
+  @media screen and (max-width: 749px) {
+    .sw-reviews {
+      padding-block: 48px;
+    }
+
+    .sw-reviews__grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Reviews",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-5"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Real Women. Real Results."
+    },
+    {
+      "type": "text",
+      "id": "aggregate_score",
+      "label": "Aggregate score",
+      "default": "4.8"
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Total reviews count",
+      "default": "2,400+"
+    },
+    {
+      "type": "header",
+      "content": "Review 1"
+    },
+    {
+      "type": "textarea",
+      "id": "review_1_text",
+      "label": "Review text",
+      "default": "I have thick, wavy hair and this brush changed my morning routine completely. I used to spend 40 minutes — now I'm done in 15. The results are salon-level, no exaggeration."
+    },
+    {
+      "type": "text",
+      "id": "review_1_name",
+      "label": "Name",
+      "default": "Camila R."
+    },
+    {
+      "type": "text",
+      "id": "review_1_detail",
+      "label": "Detail (e.g. hair type)",
+      "default": "Thick, wavy hair · Miami, FL"
+    },
+    {
+      "type": "header",
+      "content": "Review 2"
+    },
+    {
+      "type": "textarea",
+      "id": "review_2_text",
+      "label": "Review text",
+      "default": "The frizz control is unreal. I live in a humid city and my hair stays smooth all day. I've tried three other hot air brushes — this is the only one that actually delivers on its promise."
+    },
+    {
+      "type": "text",
+      "id": "review_2_name",
+      "label": "Name",
+      "default": "Priya M."
+    },
+    {
+      "type": "text",
+      "id": "review_2_detail",
+      "label": "Detail",
+      "default": "Fine, straight hair · Houston, TX"
+    },
+    {
+      "type": "header",
+      "content": "Review 3"
+    },
+    {
+      "type": "textarea",
+      "id": "review_3_text",
+      "label": "Review text",
+      "default": "Bought this after seeing it on TikTok and it totally lives up to the hype. Super lightweight, heats up fast, and the cable is long enough to actually move around. 10/10."
+    },
+    {
+      "type": "text",
+      "id": "review_3_name",
+      "label": "Name",
+      "default": "Ashley T."
+    },
+    {
+      "type": "text",
+      "id": "review_3_detail",
+      "label": "Detail",
+      "default": "Curly hair · New York, NY"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews"
+    }
+  ]
+}
+{% endschema %}
