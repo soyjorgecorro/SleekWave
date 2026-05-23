@@ -6,79 +6,28 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
-    "hero": {
+    "hero_jVaWmY": {
       "type": "hero",
       "blocks": {
-        "text_eyebrow": {
+        "text_YLPk4p": {
           "type": "text",
-          "name": "Eyebrow",
+          "name": "t:names.heading",
           "settings": {
-            "text": "<p>Ionic · Professional · Effortless</p>",
+            "text": "<p>Browse our latest products</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "h6",
+            "type_preset": "h2",
             "font": "var(--font-body--family)",
-            "font_size": "0.75rem",
-            "line_height": "normal",
-            "letter_spacing": "0.15em",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "color": "#C9A96E",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_headline": {
-          "type": "text",
-          "name": "Headline",
-          "settings": {
-            "text": "<h1>Salon Blow-Out.<br>At Home.<br>In 15 Minutes.</h1>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h1",
-            "font": "var(--font-heading--family)",
-            "font_size": "",
-            "line_height": "display-tight",
-            "letter_spacing": "-0.02em",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "#ffffff",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_subhead": {
-          "type": "text",
-          "name": "Subheadline",
-          "settings": {
-            "text": "<p>Ionic technology. Zero frizz. Full control.</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "paragraph",
-            "font": "var(--font-body--family)",
-            "font_size": "1.05rem",
+            "font_size": "1rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "color": "rgba(255,255,255,0.8)",
+            "color": "var(--color-foreground-heading)",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -89,29 +38,27 @@
           },
           "blocks": {}
         },
-        "button_cta": {
+        "button_H9gpTf": {
           "type": "button",
-          "name": "CTA",
+          "name": "t:names.button",
           "settings": {
-            "label": "Shop Now →",
+            "label": "Shop all",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
-            "style_class": "button",
+            "style_class": "button-secondary",
             "width": "fit-content",
             "custom_width": 100,
-            "width_mobile": "fill",
+            "width_mobile": "fit-content",
             "custom_width_mobile": 100
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "text_eyebrow",
-        "text_headline",
-        "text_subhead",
-        "button_cta"
+        "text_YLPk4p",
+        "button_H9gpTf"
       ],
-      "name": "Hero",
+      "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
         "media_type_2": "image",
@@ -119,54 +66,46 @@
         "custom_mobile_media": false,
         "media_type_1_mobile": "image",
         "media_type_2_mobile": "image",
+        "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
+        "horizontal_alignment": "space-between",
         "vertical_alignment": "flex-end",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "align_baseline": true,
+        "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 20,
-        "section_width": "full-width",
-        "section_height": "large",
-        "section_height_custom": 70,
+        "gap": 24,
+        "section_width": "page-width",
+        "section_height": "medium",
+        "section_height_custom": 50,
         "color_scheme": "scheme-6",
         "toggle_overlay": true,
-        "overlay_color": "#0D0D0D80",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
+        "overlay_color": "#12121266",
+        "overlay_style": "solid",
+        "gradient_direction": "to bottom",
         "blurred_reflection": false,
         "reflection_opacity": 75,
-        "padding-block-start": 120,
-        "padding-block-end": 80
+        "padding-block-start": 100,
+        "padding-block-end": 72
       }
     },
-    "trust_bar_home": {
-      "type": "sw-trust-bar",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "item_1_text": "30-Day Money Back Guarantee",
-        "item_2_text": "1,200W Professional Grade",
-        "item_3_text": "Free US Shipping Over $50"
-      }
-    },
-    "featured_product": {
+    "product_list_fa6P9H": {
       "type": "product-list",
       "blocks": {
         "static-header": {
           "type": "_product-list-content",
-          "name": "Header",
+          "name": "t:names.header",
           "static": true,
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 8,
+            "gap": 12,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -188,22 +127,22 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_list_text": {
+            "product_list_text_YFtzcL": {
               "type": "_product-list-text",
-              "name": "Heading",
+              "name": "t:names.collection_title",
               "settings": {
-                "text": "<h2>The SleekWave Brush</h2>",
+                "text": "<h3>{{ closest.collection.title }}</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "h3",
-                "font": "var(--font-heading--family)",
+                "alignment": "left",
+                "type_preset": "h4",
+                "font": "var(--font-body--family)",
                 "font_size": "",
                 "line_height": "normal",
-                "letter_spacing": "-0.01em",
+                "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "color": "#0D0D0D",
+                "color": "var(--color-foreground)",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -214,36 +153,24 @@
               },
               "blocks": {}
             },
-            "product_list_subtext": {
-              "type": "_product-list-text",
-              "name": "Subtext",
+            "product_list_button_MWeP9V": {
+              "type": "_product-list-button",
+              "name": "t:names.product_list_button",
               "settings": {
-                "text": "<p>The only tool you need for a professional blow-out at home.</p>",
+                "label": "View all",
+                "open_in_new_tab": false,
+                "style_class": "link",
                 "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "paragraph",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "#8C8C8C",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "product_list_text",
-            "product_list_subtext"
+            "product_list_text_YFtzcL",
+            "product_list_button_MWeP9V"
           ]
         },
         "static-product-card": {
@@ -251,7 +178,7 @@
           "name": "t:names.product_card",
           "static": true,
           "settings": {
-            "product_card_gap": 8,
+            "product_card_gap": 4,
             "inherit_color_scheme": true,
             "color_scheme": "",
             "border": "none",
@@ -259,16 +186,16 @@
             "border_opacity": 100,
             "border_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 12,
+            "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_card_gallery": {
+            "product_card_gallery_677WP3": {
               "type": "_product-card-gallery",
               "name": "t:names.product_card_media",
               "settings": {
-                "image_ratio": "square",
+                "image_ratio": "adapt",
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
@@ -280,7 +207,7 @@
               },
               "blocks": {}
             },
-            "product_title": {
+            "product_title_YXxMTj": {
               "type": "product-title",
               "name": "t:names.product_title",
               "settings": {
@@ -298,15 +225,16 @@
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 8,
+                "padding-block-start": 4,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
               "blocks": {}
             },
-            "price": {
+            "price_JQzVV4": {
               "type": "price",
+              "name": "t:names.product_price",
               "settings": {
                 "show_sale_price_first": true,
                 "show_installments": false,
@@ -329,88 +257,80 @@
             }
           },
           "block_order": [
-            "product_card_gallery",
-            "product_title",
-            "price"
+            "product_card_gallery_677WP3",
+            "product_title_YXxMTj",
+            "price_JQzVV4"
           ]
         }
       },
-      "name": "Featured Products",
+      "name": "Featured collection",
       "settings": {
         "collection": "all",
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "max_products": 4,
+        "max_products": 8,
         "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
-        "columns_gap": 12,
+        "columns_gap": 8,
         "rows_gap": 24,
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
-        "horizontal_alignment": "center",
-        "gap": 36,
+        "horizontal_alignment": "flex-start",
+        "gap": 28,
         "color_scheme": "scheme-1",
-        "padding-block-start": 72,
-        "padding-block-end": 72
+        "padding-block-start": 48,
+        "padding-block-end": 48
       }
     },
-    "benefits_home": {
-      "type": "sw-benefits",
+    "1779498446d34258aa": {
+      "type": "_blocks",
+      "blocks": {
+        "judge_me_reviews_review_widget_homepage_TJWKC3": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget_homepage/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "",
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_homepage_TJWKC3"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "heading": "Designed for the Way You Live",
-        "benefit_1_title": "Ionic Technology",
-        "benefit_1_desc": "Reduces frizz up to 75% by sealing the hair cuticle and locking in moisture for a smooth, glossy finish.",
-        "benefit_2_title": "3 Heat Settings",
-        "benefit_2_desc": "From a quick blow-out to a gentle style — choose low, medium, or high and take complete control of your result.",
-        "benefit_3_title": "360° Airflow Barrel",
-        "benefit_3_desc": "Ceramic-tourmaline barrel wraps each strand evenly — building volume at the root and shine through the ends."
-      }
-    },
-    "reviews_home": {
-      "type": "sw-reviews",
-      "settings": {
-        "color_scheme": "scheme-5",
-        "heading": "Real Women. Real Results.",
-        "aggregate_score": "4.8",
-        "review_count": "2,400+",
-        "review_1_text": "I have thick, wavy hair and this brush changed my morning routine completely. I used to spend 40 minutes — now I'm done in 15. The results are salon-level, no exaggeration.",
-        "review_1_name": "Camila R.",
-        "review_1_detail": "Thick, wavy hair · Miami, FL",
-        "review_2_text": "The frizz control is unreal. I live in a humid city and my hair stays smooth all day. I've tried three other hot air brushes — this is the only one that actually delivers.",
-        "review_2_name": "Priya M.",
-        "review_2_detail": "Fine, straight hair · Houston, TX",
-        "review_3_text": "Bought this after seeing it on TikTok and it totally lives up to the hype. Super lightweight, heats up fast, and the cable is long enough to actually move around. 10/10.",
-        "review_3_name": "Ashley T.",
-        "review_3_detail": "Curly hair · New York, NY"
-      }
-    },
-    "faq_home": {
-      "type": "sw-faq",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "heading": "Frequently Asked Questions",
-        "q_1": "Does it work on thick or curly hair?",
-        "a_1": "Yes. The 360° airflow barrel and ionic technology are effective on all hair types, including thick, coarse, and naturally curly hair. We recommend using the medium or high heat setting for denser textures.",
-        "q_2": "How long does it take to heat up?",
-        "a_2": "The SleekWave brush reaches full operating temperature in under 60 seconds, so you can go from off to styling in no time.",
-        "q_3": "Is it safe to use daily?",
-        "a_3": "Yes. The ceramic-tourmaline coating distributes heat evenly to prevent hot spots. For best results and long-term hair health, we recommend using a heat protectant spray before styling.",
-        "q_4": "What voltage does it use? Can I use it abroad?",
-        "a_4": "The SleekWave brush is dual voltage (110–240V), making it compatible with outlets worldwide. You may need a plug adapter depending on your destination.",
-        "q_5": "What is the return policy?",
-        "a_5": "We offer a 30-day hassle-free return policy. If you are not completely satisfied, contact our team and we will take care of you — no questions asked."
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     }
   },
   "order": [
-    "hero",
-    "trust_bar_home",
-    "featured_product",
-    "benefits_home",
-    "reviews_home",
-    "faq_home"
+    "hero_jVaWmY",
+    "product_list_fa6P9H",
+    "1779498446d34258aa"
   ]
 }
